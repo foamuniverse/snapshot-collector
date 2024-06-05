@@ -21,7 +21,7 @@ metriclist = { 'dbstat'  : [open('/script/sql/dbstats.sql').read()]
 targetlist = os.environ['TARGETS'].split(",")
 
 # The separate connection details for the central collection db below.
-collection_instance =   f"""host=ads-managed-database-flexible.postgres.database.azure.com
+collection_instance =   f"""host={os.environ['SNAPSHOT_HOSTNAME']}
                             dbname=snapshot
                             user={os.environ['WRITER_USER']}
                             password={os.environ['WRITER_PASSWORD']}"""
