@@ -1,0 +1,31 @@
+SELECT
+     datid                    
+     ,datname                  
+     ,numbackends              
+     ,xact_commit              
+     ,xact_rollback            
+     ,blks_read                
+     ,blks_hit                 
+     ,tup_returned             
+     ,tup_fetched              
+     ,tup_inserted             
+     ,tup_updated              
+     ,tup_deleted              
+     ,conflicts                
+     ,temp_files               
+     ,temp_bytes               
+     ,deadlocks                
+     ,checksum_failures        
+     ,checksum_last_failure    
+     ,blk_read_time            
+     ,blk_write_time           
+     ,session_time             
+     ,active_time              
+     ,idle_in_transaction_time 
+     ,sessions                 
+     ,sessions_abandoned       
+     ,sessions_fatal           
+     ,sessions_killed          
+     ,stats_reset              
+     ,pg_database_size(datname) AS dbsize
+FROM pg_stat_database
